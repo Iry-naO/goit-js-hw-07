@@ -40,13 +40,30 @@ const galleryList = document.querySelector(".gallery");
 const imagesList = images.map((image) => {
   const liElem = document.createElement("li");
   const imgElem = document.createElement("img");
+
   imgElem.src = image.url;
   imgElem.alt = image.alt;
   imgElem.setAttribute("width", 360);
   imgElem.style.display = "block";
+
   liElem.append(imgElem);
   return liElem;
 });
 
 galleryList.append(...imagesList);
 console.log(galleryList);
+
+// const galleryList = document.querySelector(".gallery");
+
+// const imagesList = images
+//   .map((image) => {
+//     return `
+//       <li>
+//         <img src="${image.url}" alt="${image.alt}">
+//       </li>
+//     `;
+//   })
+//   .join("");
+
+// galleryList.insertAdjacentHTML("beforeend", imagesList);
+// console.log(galleryList);
