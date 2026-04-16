@@ -93,3 +93,35 @@ li {
   width: 360px;
   margin-top: 10px;
 }
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  width: 408px;
+  padding: 24px;
+  gap: 8px;
+}
+
+.label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  color: #2e2f42;
+}
+
+.form-input {
+  width: 100%;
+  height: 40px;
+  padding: 0;
+}
+
+.btn {
+  margin-top: 8px;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 16px;
+  width: 86px;
+  height: 40px;
+  background-color: #4e75ff;
+  color: #fff;
+}
