@@ -8,15 +8,17 @@
 // в той час, як колір фону на <body> буде у форматі rgb.
 // Це нормально й не потребує якихось правок.
 
-// На що буде звертати увагу ментор при перевірці:
-
-// -- Фон на <body> задається тільки після кліку на button.change-color
-// -- При кожному кліку на елемент button.change-color
-// фон <body> зафарбовується новим рандомним кольором
-// На <body> і span.color значення одного й того самого кольору
-
 function getRandomHexColor() {
   return `#${Math.floor(Math.random() * 16777215)
     .toString(16)
     .padStart(6, 0)}`;
 }
+const btn = document.querySelector(".change-color");
+const bodyEl = document.querySelector("body");
+const spanColor = document.querySelector(".color");
+
+btn.addEventListener("click", (event) => {
+  const color = getRandomHexColor();
+  bodyEl.style.backgroundColor = color;
+  spanColor.textContent = color;
+});
