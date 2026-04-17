@@ -10,6 +10,6 @@ const liItemLength = `Number of categories: ${liItem.length}`;
 console.log(liItemLength);
 
 liItem.forEach((item) => {
-  console.log(`Category: ${item.querySelector(".title").textContent}`);
-  console.log(`Elements: ${item.querySelectorAll(".subitem").length}`);
+  console.log(`Category: ${item.querySelector("h2").textContent}`);
+  console.log(`Elements: ${item.querySelectorAll("li").length}`);
 });
